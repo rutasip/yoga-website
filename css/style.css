@@ -25,6 +25,8 @@ a {
 
 ul {
   margin: 0px;
+  list-style-type: none;
+  padding: 0;
 }
 
 .align-items-center {
@@ -200,7 +202,7 @@ ul {
   padding-bottom: 3px;
 }
 
-.pricing_area .single_pricing p {
+.pricing_area .single_pricing li {
   color: #727272;
   font-size: 15px;
   line-height: 28px;

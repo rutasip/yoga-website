@@ -1,0 +1,207 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins:200,200i,300,300i,400,400i,500,500i,600,600i,700,800&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+body {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-top: 0;
+}
+
+a {
+  color: #aa0a5f;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+ul {
+  margin: 0px;
+}
+
+.align-items-center {
+  align-items: center;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.container {
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+  max-width: 1140px;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+/* Must include all used columns */
+.col-xl-4 {
+  position: relative;
+  width: 100%;
+  min-height: 1px;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+.col-xl-4 {
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 33.333333%;
+  flex: 0 0 33.333333%;
+  max-width: 33.333333%;
+}
+
+/* Header */
+
+.header-area {
+  position: absolute;
+  z-index: 99;
+  width: 100%;
+}
+
+.header-area .main-header-area {
+  padding: 25px 132px;
+}
+
+@media (max-width: 1500px) {
+  .header-area .main-header-area {
+    padding: 25px;
+  }
+}
+
+.logo {
+  align-self: flex-end;
+}
+
+.header-area .main-header-area .main-menu {
+  padding: 12px 0;
+}
+
+.header-area .main-header-area .main-menu ul li {
+  display: inline-block;
+  margin: 0 10px;
+}
+
+.header-area .main-header-area .main-menu ul li a {
+  color: #727272;
+  font-size: 15px;
+  text-transform: capitalize;
+}
+
+.header-area .main-header-area .main-menu ul li a:hover {
+  color: #ff008c;
+}
+
+.header-area .main-header-area .contact-number .contact-btn a {
+  padding: 11px 26px;
+  font-weight: 500;
+  border: 1px solid #ff008c;
+  color: #ff008c;
+  border-radius: 30px;
+  transition: 0.3s;
+}
+
+.header-area .main-header-area .contact-number .contact-btn a:hover {
+  color: #fff;
+  background: #ff008c;
+}
+
+/* Content Heading with Blobs */
+
+.blob_bg {
+  position: absolute;
+  width: 36%;
+  right: 0;
+  top: 25%;
+}
+
+.blob_bg img {
+  width: 100%;
+}
+
+.heading_area {
+  background-size: cover;
+  background-position: bottom;
+  padding: 190px 0 100px 0;
+  background-repeat: no-repeat;
+  position: relative;
+  z-index: 0;
+}
+
+.heading_area h3 {
+  font-size: 50px;
+  color: #001d38;
+  font-weight: 500;
+  text-transform: capitalize;
+}
+
+.heading_blob {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 21%;
+}
+
+.heading_blob img {
+  width: 100%;
+}
+
+/* Pricing area */
+
+.pricing_area .single_pricing {
+  padding: 45px 35px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.04);
+  border-radius: 10px;
+}
+
+.pricing_area .single_pricing .icon {
+  width: 95px;
+  height: 95px;
+  background: #f5f5ff;
+  border-radius: 50%;
+  line-height: 95px;
+  margin: auto;
+}
+
+.pricing_area .col-xl-4:nth-child(2) .single_pricing .icon {
+  background: #fff0f8;
+}
+
+.pricing_area .col-xl-4:nth-child(3) .single_pricing .icon {
+  background: #effdf5;
+}
+
+.pricing_area .single_pricing .icon img {
+  vertical-align: middle;
+  width: 50px;
+  height: 50px;
+}
+
+.pricing_area .single_pricing h3 {
+  font-size: 22px;
+  font-weight: 400;
+  color: #001d38;
+  margin-top: 24px;
+  padding-bottom: 3px;
+}
+
+.pricing_area .single_pricing p {
+  color: #727272;
+  font-size: 15px;
+  line-height: 28px;
+}

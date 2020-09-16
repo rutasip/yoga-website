@@ -14,7 +14,7 @@ h3,
 h4,
 h5,
 h6 {
-  margin-top: 0;
+  margin: 0;
 }
 
 a {
@@ -35,6 +35,10 @@ ul {
 
 .text-center {
   text-align: center;
+}
+
+.inline-block {
+  display: inline-block;
 }
 
 .container {
@@ -71,7 +75,9 @@ ul {
 /* Header */
 
 .header-area {
-  position: absolute;
+  background: #fff;
+  opacity: 0.7;
+  position: fixed;
   z-index: 99;
   width: 100%;
 }
@@ -121,6 +127,40 @@ ul {
 .header-area .main-header-area .contact-number .contact-btn a:hover {
   color: #fff;
   background: #ff008c;
+}
+
+/* Home page */
+
+.hero_img {
+  position: absolute;
+  width: 100%;
+}
+
+.hero_img img {
+  width: 100%;
+  opacity: 0.6;
+}
+
+.hero_round {
+  padding: 200px 0 100px 0;
+  position: relative;
+  text-align: center;
+}
+
+.hero_text {
+  display: inline-block;
+  text-align: center;
+}
+
+.hero_text h3 {
+  padding: 11px 26px;
+  font-size: 4vw;
+  font-weight: 500;
+  background-color: #ff008c;
+  color: #fff;
+  border-radius: 30px;
+  opacity: 0.6;
+  text-transform: capitalize;
 }
 
 /* Content Heading with Blobs */

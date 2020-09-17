@@ -41,6 +41,11 @@ ul {
   display: inline-block;
 }
 
+.no-bottom-padding {
+  /* Must use important to show my college lecturer I understand this keyword */
+  padding-bottom: 0 !important;
+}
+
 .container {
   width: 100%;
   padding-right: 15px;
@@ -214,6 +219,33 @@ ul {
 .card-img {
   width: 100%;
 }
+
+/* Landing page services */
+
+.pricing_area .single_feature {
+  margin-bottom: 60px;
+  padding-right: 50px;
+}
+
+.pricing_area .single_feature img {
+  width: 90px;
+}
+
+.pricing_area .single_feature h4 {
+  font-size: 18px;
+  margin-top: 20px;
+  margin-bottom: 13px;
+  font-weight: 400;
+}
+
+.pricing_area .single_feature p {
+  font-size: 15px;
+  margin-bottom: 0;
+  line-height: 28px;
+  color: #727272;
+}
+
+/* Landing page blog */
 
 .blog_details {
   padding: 60px 30px 35px 35px;

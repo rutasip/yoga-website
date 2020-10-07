@@ -3,6 +3,7 @@
 * {
   box-sizing: border-box;
 }
+
 body {
   font-family: "Poppins", sans-serif;
   margin: 0;
@@ -24,7 +25,7 @@ a {
 }
 
 ul {
-  margin: 0px;
+  margin: 0;
   list-style-type: none;
   padding: 0;
 }
@@ -55,31 +56,19 @@ ul {
   max-width: 1140px;
 }
 
-.row {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-}
-
-/* Must include all used columns */
 .col-xl-4 {
   position: relative;
   width: 100%;
-  min-height: 1px;
+  /* min-height: 1px; */
   padding-right: 15px;
   padding-left: 15px;
-}
-
-.col-xl-4 {
-  -webkit-box-flex: 0;
-  -ms-flex: 0 0 33.333333%;
   flex: 0 0 33.333333%;
   max-width: 33.333333%;
 }
 
 /* Header */
 
-.header-area {
+.header {
   background: #fff;
   opacity: 0.85;
   position: fixed;
@@ -87,40 +76,44 @@ ul {
   width: 100%;
 }
 
-.header-area .main-header-area {
+.header_wrapper {
   padding: 25px 132px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: center;
 }
 
 @media (max-width: 1500px) {
-  .header-area .main-header-area {
+  .header_wrapper {
     padding: 25px;
   }
 }
 
-.logo {
+.header_wrapper .logo {
   align-self: flex-end;
 }
 
-.header-area .main-header-area .main-menu {
+.header_wrapper .main-menu {
   padding: 12px 0;
 }
 
-.header-area .main-header-area .main-menu ul li {
+.header_wrapper .main-menu ul li {
   display: inline-block;
   margin: 0 10px;
 }
 
-.header-area .main-header-area .main-menu ul li a {
+.header_wrapper .main-menu ul li a {
   color: #727272;
   font-size: 15px;
   text-transform: capitalize;
 }
 
-.header-area .main-header-area .main-menu ul li a:hover {
+.header_wrapper .main-menu ul li a:hover {
   color: #ff008c;
 }
 
-.header-area .main-header-area .contact-number .contact-btn a {
+.header_wrapper .contact .contact_btn a {
   padding: 11px 26px;
   font-weight: 500;
   border: 1px solid #ff008c;
@@ -129,7 +122,7 @@ ul {
   transition: 0.3s;
 }
 
-.header-area .main-header-area .contact-number .contact-btn a:hover {
+.header_wrapper .contact .contact_btn a:hover {
   color: #fff;
   background: #ff008c;
 }

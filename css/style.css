@@ -310,17 +310,24 @@
 /* Timetable */
 
 .timetable {
-  padding: 15px 0px 30px 0px;
-  max-width: 500px;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.04);
   border-radius: 10px;
+  padding-bottom: 24px;
 }
 
 .timetable h3 {
   font-weight: 400;
-  margin-top: 24px;
-  padding-left: 30px;
-  padding-bottom: 30px;
+  padding: 24px 30px;
+  margin-bottom: 24px;
+  background-color: #f5f5ff;
+}
+
+.row .col-xl-4:nth-child(2) .timetable h3 {
+  background-color: #fff0f8;
+}
+
+.row .col-xl-4:nth-child(3) .timetable h3 {
+  background-color: #effdf5;
 }
 
 .timetable h3 b {

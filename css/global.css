@@ -16,12 +16,15 @@ h4,
 h5,
 h6 {
   margin: 0;
+  line-height: 1.2em;
+  color: #001d38;
+  font-weight: 500;
 }
 
-a {
-  color: #aa0a5f;
-  text-decoration: none;
-  transition: 0.3s;
+p {
+  color: #727272;
+  font-weight: 400;
+  margin: 0;
 }
 
 ul {
@@ -30,20 +33,24 @@ ul {
   padding: 0;
 }
 
-.align-items-center {
-  align-items: center;
+a,
+button {
+  color: #f06657;
+  transition: 0.3s;
+  text-decoration: none;
 }
 
-.text-center {
-  text-align: center;
+button,
+input,
+select,
+textarea {
+  margin: 0;
+  font-family: inherit;
 }
 
-.inline-block {
-  display: inline-block;
-}
-
-.inherit-height {
-  height: inherit !important;
+.container {
+  padding-left: 25px;
+  padding-right: 25px;
 }
 
 .row {
@@ -56,15 +63,123 @@ ul {
   max-width: 1140px;
 }
 
-.col-xl-4 {
+.col-one-third {
   position: relative;
   width: 100%;
   padding-right: 15px;
   padding-left: 15px;
-  flex: 0 0 33.333333%;
-  max-width: 33.333333%;
+  max-width: 33.33%;
 }
 
-.height-700 {
-  height: 700px;
+.col-two-thirds {
+  position: relative;
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  max-width: 66.66%;
+}
+
+/* ALIGNMENT */
+
+.display-flex {
+  display: flex;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+/* SPACING */
+
+.mt-80 {
+  margin-top: 80px;
+}
+
+.mt-50 {
+  margin-top: 50px;
+}
+
+.mt-10 {
+  margin-top: 10px;
+}
+
+.mb-100 {
+  margin-bottom: 100px;
+}
+
+.mb-80 {
+  margin-bottom: 80px;
+}
+
+/* Items */
+
+.input-field,
+.text-field {
+  border: 1px solid #f0e9ff;
+  margin-bottom: 20px;
+  font-size: 13px;
+  width: 100%;
+  max-width: 100%;
+  padding-left: 20px;
+}
+
+.input-field {
+  height: 50px;
+}
+
+.text-field {
+  padding-top: 14px;
+}
+
+.input-field::placeholder,
+.text-field::placeholder {
+  color: #999999;
+}
+
+.input-field:focus,
+.text-field:focus {
+  border-color: #f0e9ff;
+  outline: 0;
+}
+
+.boxed-btn {
+  background: #fff;
+  font-size: 14px;
+  border: 1px solid #f06657;
+  letter-spacing: 3px;
+  color: #f06657;
+  text-transform: uppercase;
+  cursor: pointer;
+  width: 100%;
+  height: 50px;
+}
+
+.boxed-btn:hover {
+  background: #f06657;
+  color: #fff;
+}
+
+.boxed-btn:focus {
+  outline: none;
+}
+
+.section-title {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.section-title h3 {
+  font-size: 32px;
+}
+
+.section-title h3:first-letter {
+  text-transform: capitalize;
+}
+
+.box-shadow {
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.04);
 }

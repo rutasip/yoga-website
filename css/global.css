@@ -51,6 +51,7 @@ textarea {
 }
 
 .container {
+  display: flex;
   padding-right: 25px;
   padding-left: 25px;
 }
@@ -82,27 +83,27 @@ textarea {
 }
 
 /* ALIGNMENT */
-
-.display-flex {
-  display: flex;
-}
-
 .center-x-y {
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
+.justify-center {
+  display: flex;
+  justify-content: center;
+}
+
+.align-center {
+  display: flex;
+  align-items: center;
+}
+
 .text-center {
   text-align: center;
 }
 
-.justify-center {
-  justify-content: center;
-}
-
 /* SPACING */
-
 .mt-80 {
   margin-top: 80px;
 }
@@ -124,7 +125,6 @@ textarea {
 }
 
 /* Items */
-
 .input-field,
 .text-field {
   border: 1px solid #f0e9ff;

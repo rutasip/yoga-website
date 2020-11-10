@@ -50,14 +50,10 @@ textarea {
   font-family: inherit;
 }
 
-.container {
-  display: flex;
-  padding-right: 25px;
-  padding-left: 25px;
-}
-
 .row {
   display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   width: 100%;
   padding-right: 15px;
   padding-left: 15px;
@@ -71,7 +67,10 @@ textarea {
   width: 100%;
   padding-right: 15px;
   padding-left: 15px;
-  max-width: 33.33%;
+  margin-bottom: 30px;
+  min-width: 280px;
+  flex: 1;
+  max-width: 440px;
 }
 
 .col-two-thirds {
@@ -79,7 +78,13 @@ textarea {
   width: 100%;
   padding-right: 15px;
   padding-left: 15px;
-  max-width: 66.66%;
+  max-width: 100%;
+}
+
+@media (min-width: 768px) {
+  .col-two-thirds {
+    max-width: 66.66%;
+  }
 }
 
 /* ALIGNMENT */
@@ -104,6 +109,10 @@ textarea {
 }
 
 /* SPACING */
+.m-0 {
+  margin: 0;
+}
+
 .mt-80 {
   margin-top: 80px;
 }
@@ -122,6 +131,17 @@ textarea {
 
 .mb-80 {
   margin-bottom: 80px;
+}
+
+/* WIDTH */
+.mobile-full-width {
+  max-width: 100%;
+}
+
+@media (min-width: 768px) {
+  .mobile-full-width {
+    max-width: fit-content;
+  }
 }
 
 /* Items */

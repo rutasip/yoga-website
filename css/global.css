@@ -52,14 +52,11 @@ textarea {
 
 button {
   border: none;
+  outline: none;
   background: none;
   padding: 0;
   cursor: pointer;
 }
-
-/* button:hover {
-  cursor: pointer;
-} */
 
 .row {
   display: flex;
@@ -79,9 +76,9 @@ button {
   padding-right: 15px;
   padding-left: 15px;
   margin-bottom: 30px;
-  min-width: 280px;
+  min-width: 255px;
   flex: 1;
-  max-width: 440px;
+  max-width: 33.33%;
 }
 
 .col-two-thirds {
@@ -153,6 +150,18 @@ button {
   .mobile-full-width {
     max-width: fit-content;
   }
+}
+
+.max-width-320 {
+  max-width: 320px;
+}
+
+.max-width-380 {
+  max-width: 380px;
+}
+
+.max-width-440 {
+  max-width: 440px;
 }
 
 /* Items */

@@ -27,7 +27,7 @@
         <div class="contact-btn">
           <a href="#" class="align-center"><img src="img/phone.png" alt="" />+370 6452 9901</a>
         </div>
-        <div class="open-nav-overlay-btn" onclick="openNav()">&#9776;</div>
+        <button class="open-nav-overlay-btn" onclick="openNav()">&#9776;</button>
         <div class="nav-overlay">
           <button class="nav-overlay_close-btn" onclick="closeNav()">&times;</button>
           <nav class="nav-overlay_menu">
@@ -54,7 +54,7 @@
             <h3>kainos</h3>
           </div>
             <div class="row">
-              <div class="col-one-third">
+              <div class="col-one-third max-width-320">
                 <div class="pricing box-shadow">
                   <div class="icon center-x-y">
                     <img src="img/yoga/cobra.svg" alt="" />
@@ -67,7 +67,7 @@
                   </ul>
                 </div>
               </div>
-              <div class="col-one-third">
+              <div class="col-one-third max-width-320">
                 <div class="pricing box-shadow">
                   <div class="icon center-x-y">
                     <img src="img/yoga/camel.svg" alt="" />
@@ -84,7 +84,7 @@
                   </ul>
                 </div>
               </div>
-              <div class="col-one-third">
+              <div class="col-one-third max-width-320">
                 <div class="pricing box-shadow">
                   <div class="icon center-x-y">
                     <img src="img/yoga/candle.svg" alt="" />
@@ -186,5 +186,14 @@
         Hatha Jogos Studija</a>
       </p>
     </footer>
+    <script>
+      function openNav() {
+        document.getElementsByClassName("nav-overlay")[0].style.width = "100%";
+      }
+      
+      function closeNav() {
+        document.getElementsByClassName("nav-overlay")[0].style.width = "0%";
+      }
+      </script>
   </body>
 </html>

@@ -27,7 +27,7 @@
         <div class="contact-btn">
           <a href="#" class="align-center"><img src="img/phone.png" alt="" />+370 6452 9901</a>
         </div>
-        <div class="open-nav-overlay-btn" onclick="openNav()">&#9776;</div>
+        <button class="open-nav-overlay-btn" onclick="openNav()">&#9776;</button>
         <div class="nav-overlay">
           <button class="nav-overlay_close-btn" onclick="closeNav()">&times;</button>
           <nav class="nav-overlay_menu">
@@ -195,5 +195,14 @@
         Hatha Jogos Studija</a>
       </p>
     </footer>
+    <script>
+      function openNav() {
+        document.getElementsByClassName("nav-overlay")[0].style.width = "100%";
+      }
+      
+      function closeNav() {
+        document.getElementsByClassName("nav-overlay")[0].style.width = "0%";
+      }
+      </script>
   </body>
 </html>

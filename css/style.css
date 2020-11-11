@@ -12,6 +12,10 @@
   opacity: 0.6;
 }
 
+.header .menu {
+  display: none;
+}
+
 .header .menu li {
   display: inline-block;
   margin: 0 10px;
@@ -25,8 +29,12 @@
   color: #f06657;
 }
 
+.contact-btn {
+  display: none;
+}
+
 .contact-btn a {
-  padding: 11px 26px;
+  padding: 9px 17px;
   border: 1px solid #f06657;
   color: #f06657;
   border-radius: 30px;
@@ -40,6 +48,60 @@
 .contact-btn img {
   width: 16px;
   margin-right: 4px;
+}
+
+/* Header overlay nav */
+.open-nav-overlay-btn {
+  font-size: 28px;
+  opacity: 0.6;
+  transform: scale(1.2, 1);
+}
+
+.nav-overlay {
+  height: 100%;
+  width: 0%;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  right: 0;
+  background-color: #fff;
+  transition: 0.5s;
+}
+
+.nav-overlay_menu {
+  position: relative;
+  top: 25%;
+  text-align: center;
+}
+
+.nav-overlay a {
+  font-size: 36px;
+  display: block;
+  text-transform: capitalize;
+  line-height: 60px;
+}
+
+.nav-overlay a:hover,
+.nav-overlay a:focus {
+  color: #f06657;
+}
+
+.nav-overlay_close-btn {
+  position: absolute;
+  top: 35px;
+  left: 35px;
+  line-height: 0.8;
+  font-size: 50px;
+  opacity: 0.6;
+}
+
+@media (min-width: 768px) {
+  .header .nav-overlay {
+    display: none;
+  }
+  .header .open-nav-overlay-btn {
+    display: none;
+  }
 }
 
 /* Landing page */
@@ -63,7 +125,7 @@
 }
 
 .hero_bg img {
-  width: 70%;
+  width: 100%;
   opacity: 0.6;
 }
 
@@ -142,9 +204,9 @@
 }
 
 .blog_details h2 {
-  font-size: 18px;
+  font-size: 24px;
   font-weight: 600;
-  margin-bottom: 8px;
+  margin-bottom: 15px;
 }
 
 .blog_details p {
@@ -153,13 +215,6 @@
 
 .blog_details a:hover {
   color: #f06657;
-}
-
-@media (min-width: 768px) {
-  .blog_details h2 {
-    font-size: 24px;
-    margin-bottom: 15px;
-  }
 }
 
 .blog-info-link li {
@@ -403,6 +458,24 @@
   padding: 30px 0;
   color: #919191;
   background: #002140;
+}
+
+@media (min-width: 768px) {
+  .header .menu {
+    display: flex;
+  }
+  .header .contact-btn {
+    display: flex;
+  }
+  .hero_bg img {
+    width: 70%;
+  }
+}
+
+@media (min-width: 992px) {
+  .header .contact-btn a {
+    padding: 11px 26px;
+  }
 }
 
 @media (min-width: 1200px) {

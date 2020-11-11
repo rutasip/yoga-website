@@ -50,6 +50,17 @@ textarea {
   font-family: inherit;
 }
 
+button {
+  border: none;
+  background: none;
+  padding: 0;
+  cursor: pointer;
+}
+
+/* button:hover {
+  cursor: pointer;
+} */
+
 .row {
   display: flex;
   flex-wrap: wrap;

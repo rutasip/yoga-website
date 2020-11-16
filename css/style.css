@@ -323,9 +323,9 @@
 
 .sidebar .instagram-widget .widget_row {
   display: flex;
+  flex-wrap: wrap;
   margin-right: -6px;
   margin-left: -6px;
-  flex-wrap: wrap;
 }
 
 .sidebar .instagram-widget .widget_row li {

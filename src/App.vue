@@ -1,4 +1,28 @@
-@import url("https://fonts.googleapis.com/css?family=Poppins:200,200i,300,300i,400,400i,500,500i,600,600i,700,800&display=swap");
+<template>
+  <Header />
+  <div class="container">
+    <router-view />
+    <Sidebar />
+  </div>
+  <Footer />
+</template>
+
+<script>
+import Header from "@/components/Header.vue";
+import Sidebar from "@/components/Sidebar.vue";
+import Footer from "@/components/Footer.vue";
+
+export default {
+  components: {
+    Header,
+    Sidebar,
+    Footer,
+  },
+};
+</script>
+
+<style>
+@import url("https://fonts.googleapis.com/css?family=Poppins:400,500,600&display=swap");
 
 * {
   box-sizing: border-box;
@@ -231,3 +255,17 @@ button {
 .box-shadow {
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.04);
 }
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  padding-right: 25px;
+  padding-left: 25px;
+}
+
+@media (min-width: 1200px) {
+  .container {
+    flex-wrap: nowrap;
+  }
+}
+</style>

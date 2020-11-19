@@ -3,6 +3,7 @@
     <div class="logo">
       <a href="index.html">
         <img :src="logo" alt="" />
+        <h4>Yogendra</h4>
       </a>
     </div>
     <nav class="menu">
@@ -87,9 +88,20 @@ export default {
   align-items: center;
 }
 
+.header .logo a {
+  display: flex;
+  align-items: center;
+  opacity: 0.8;
+}
+
 .header .logo img {
   max-width: 50px;
-  opacity: 0.6;
+  margin-right: 8px;
+  opacity: 0.7;
+}
+
+.header .logo h4 {
+  color: #f06657;
 }
 
 .header .menu {
@@ -120,7 +132,7 @@ export default {
   display: none;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 992px) {
   .header .contact-btn {
     display: flex;
   }

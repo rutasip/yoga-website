@@ -2,7 +2,7 @@
   <div class="sidebar">
     <NewsSmallList />
     <aside class="widget box-shadow">
-      <h4 class="widget__title">Instagram nuotraukos</h4>
+      <h4 class="widget__title">Naujausios nuotraukos</h4>
       <ul class="widget__row">
         <li v-for="(item, index) in images" :key="index">
           <a href="#">

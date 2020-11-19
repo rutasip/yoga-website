@@ -1,7 +1,7 @@
 import { createRouter, createWebHashHistory } from 'vue-router'
 import Home from '../views/Home.vue'
 import Pricing from '../views/Pricing.vue'
-import Timetable from '../views/Timetable.vue'
+import Timetables from '../views/Timetables.vue'
 import Gallery from '../views/Gallery.vue'
 import Contact from '../views/Contact.vue'
 
@@ -18,8 +18,8 @@ const routes = [
   },
   {
     path: '/tvarkarastis',
-    name: 'Timetable',
-    component: Timetable
+    name: 'Timetables',
+    component: Timetables
   },
   {
     path: '/galerija',

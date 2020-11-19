@@ -172,7 +172,7 @@ button {
 
 @media (min-width: 768px) {
   .mobile-full-width {
-    max-width: fit-content;
+    max-width: min-content;
   }
 }
 

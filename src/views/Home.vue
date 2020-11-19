@@ -29,9 +29,6 @@ export default {
   data() {
     return {
       hero: require("@/assets/hero.png"),
-      gallery_1: require("@/assets/gallery/blog_1.jpg"),
-      gallery_2: require("@/assets/gallery/blog_2.jpg"),
-      gallery_3: require("@/assets/gallery/blog_3.jpg"),
     };
   },
 };

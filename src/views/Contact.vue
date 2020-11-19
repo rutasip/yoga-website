@@ -36,7 +36,7 @@
           </div>
         </div>
         <div class="row">
-          <div class="col-one-third mobile-full-width m-0">
+          <div class="col-one-third m-0">
             <div class="newsletter">
               <div class="newsletter-checkbox">
                 <input type="checkbox" id="newsletter-checkbox" />

@@ -26,13 +26,15 @@
     </nav>
     <div class="contact-btn">
       <a href="#" class="align-center"
-        ><img :src="phone" alt="" />+370 6452 9901</a
+        ><i class="material-icons">phone</i>+370 6452 9901</a
       >
     </div>
-    <button class="open-nav-overlay-btn" v-on:click="openNav">&#9776;</button>
+    <button class="open-nav-overlay-btn" v-on:click="openNav">
+      <i class="material-icons">menu</i>
+    </button>
     <div id="nav-overlay">
       <button class="nav-overlay_close-btn" v-on:click="closeNav">
-        &times;
+        <i class="material-icons">close</i>
       </button>
       <nav class="nav-overlay_menu">
         <ul>
@@ -63,7 +65,6 @@ export default {
   data() {
     return {
       logo: require("@/assets/logo.svg"),
-      phone: require("@/assets/phone.png"),
     };
   },
   methods: {
@@ -143,16 +144,16 @@ export default {
   background: #f06657;
 }
 
-.contact-btn img {
-  width: 16px;
-  margin-right: 6px;
-  transform: rotate(80deg);
+.contact-btn .material-icons {
+  font-size: 18px;
+  font-weight: 600;
+  margin-right: 3px;
+  transform: rotate(12deg);
 }
 
-.open-nav-overlay-btn {
-  font-size: 28px;
+.open-nav-overlay-btn .material-icons {
   opacity: 0.6;
-  transform: scale(1.2, 1);
+  font-size: 34px;
 }
 
 #nav-overlay {
@@ -186,11 +187,13 @@ export default {
 
 .nav-overlay_close-btn {
   position: absolute;
-  top: 35px;
-  left: 35px;
-  line-height: 0.8;
-  font-size: 50px;
+  top: 30px;
+  left: 30px;
+}
+
+.nav-overlay_close-btn .material-icons {
   opacity: 0.6;
+  font-size: 34px;
 }
 
 @media (min-width: 768px) {

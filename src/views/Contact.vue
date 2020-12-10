@@ -4,33 +4,62 @@
       <div class="section-title">
         <h3>susisiekite su mumis</h3>
       </div>
-      <form action="#">
+      <form class="contact-form" action="#" @submit.prevent="sendMessage">
         <div class="row">
-          <div class="col-one-third mobile-full-width m-0">
+          <div class="col-one-third m-0">
             <input
               type="text"
               class="input-field"
+              v-model="nameInput"
+              pattern="[a-zA-Z0-9ąčęėįšųūžĄČĘĖĮŠŲŪŽ ]+"
+              minlength="3"
+              maxlength="20"
+              oninvalid="this.setCustomValidity('Įveskite vardą. Leidžiamos mažosios raidės, didžiosios raidės, skaičiai')"
+              oninput="this.setCustomValidity('')"
               onfocus="this.placeholder = ''"
-              onblur="this.placeholder = 'Vardas'"
-              placeholder="Vardas"
+              onblur="this.placeholder = 'Vardas *'"
+              placeholder="Vardas *"
               required
             />
             <input
               type="email"
               class="input-field"
+              v-model="emailInput"
+              minlength="6"
+              maxlength="40"
+              oninvalid="this.setCustomValidity('Įveskite el. pašto adresą formatu: vardas@gmail.com')"
+              oninput="this.setCustomValidity('')"
               onfocus="this.placeholder = ''"
-              onblur="this.placeholder = 'El. paštas'"
-              placeholder="El. paštas"
+              onblur="this.placeholder = 'El. paštas *'"
+              placeholder="El. paštas *"
               required
+            />
+            <input
+              type="tel"
+              class="input-field"
+              v-model="telInput"
+              pattern="[0-9+-() ]+"
+              minlength="6"
+              maxlength="15"
+              oninvalid="this.setCustomValidity('Įveskite tel. nr. formatu: 86123456')"
+              oninput="this.setCustomValidity('')"
+              onfocus="this.placeholder = ''"
+              onblur="this.placeholder = 'Tel. numeris'"
+              placeholder="Tel. numeris"
             />
           </div>
           <div class="col-two-thirds m-0">
             <textarea
+              type="text"
               class="text-field"
-              rows="7"
+              v-model="messageInput"
+              maxlength="200"
+              oninvalid="this.setCustomValidity('Įveskite pranešimą iki 200 simbolių')"
+              oninput="this.setCustomValidity('')"
+              rows="8"
               onfocus="this.placeholder = ''"
-              onblur="this.placeholder = 'Pranešimas'"
-              placeholder="Pranešimas"
+              onblur="this.placeholder = 'Pranešimas iki 200 simbolių *'"
+              placeholder="Pranešimas iki 200 simbolių *"
               required
             ></textarea>
           </div>
@@ -70,8 +99,23 @@ export default {
   name: "Contact",
   data() {
     return {
+      nameInput: "",
+      emailInput: "",
+      telInput: "",
+      messageInput: "",
+      oninput: "this.setCustomValidity('')",
       check: require("@/assets/primary-check.png"),
     };
+  },
+  methods: {
+    sendMessage() {
+      if ((this.nameInput && this.emailInput && this.messageInput) !== "") {
+        this.nameInput = "";
+        this.emailInput = "";
+        this.telInput = "";
+        this.messageInput = "";
+      }
+    },
   },
 };
 </script>

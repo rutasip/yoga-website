@@ -11,7 +11,7 @@
               type="text"
               class="input-field"
               v-model="nameInput"
-              pattern="[a-zA-Z0-9ąčęėįšųūžĄČĘĖĮŠŲŪŽ ]+"
+              pattern="[a-zA-ZąčęėįšųūžĄČĘĖĮŠŲŪŽ ]+"
               minlength="3"
               maxlength="20"
               oninvalid="this.setCustomValidity('Įveskite vardą. Leidžiamos mažosios raidės, didžiosios raidės, skaičiai')"
@@ -19,11 +19,11 @@
               onfocus="this.placeholder = ''"
               onblur="this.placeholder = 'Vardas *'"
               placeholder="Vardas *"
-              required
             />
             <input
               type="email"
               class="input-field"
+              pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2}$"
               v-model="emailInput"
               minlength="6"
               maxlength="40"
@@ -32,13 +32,12 @@
               onfocus="this.placeholder = ''"
               onblur="this.placeholder = 'El. paštas *'"
               placeholder="El. paštas *"
-              required
             />
             <input
               type="tel"
               class="input-field"
               v-model="telInput"
-              pattern="[0-9+-() ]+"
+              pattern="([+370]{4}|[86]{2})[0-9]{6,}"
               minlength="6"
               maxlength="15"
               oninvalid="this.setCustomValidity('Įveskite tel. nr. formatu: 86123456')"
@@ -46,6 +45,7 @@
               onfocus="this.placeholder = ''"
               onblur="this.placeholder = 'Tel. numeris'"
               placeholder="Tel. numeris"
+              required
             />
           </div>
           <div class="col-two-thirds m-0">
@@ -60,7 +60,6 @@
               onfocus="this.placeholder = ''"
               onblur="this.placeholder = 'Pranešimas iki 200 simbolių *'"
               placeholder="Pranešimas iki 200 simbolių *"
-              required
             ></textarea>
           </div>
         </div>
@@ -92,6 +91,15 @@
       </form>
     </div>
   </div>
+  <teleport v-if="showModal" to="#modals">
+    <div class="modal">
+      <p>Vardas: {{ nameInput }}</p>
+      <p>El. paštas: {{ emailInput }}</p>
+      <p>Tel. numeris: {{ telInput }}</p>
+      <p>Pranešimas: {{ messageInput }}</p>
+      <button class="boxed-btn" @click="closeModalAndReset">Uždaryti</button>
+    </div>
+  </teleport>
 </template>
 
 <script>
@@ -105,16 +113,29 @@ export default {
       messageInput: "",
       oninput: "this.setCustomValidity('')",
       check: require("@/assets/primary-check.png"),
+      showModal: false,
     };
+  },
+  mounted() {
+    const headings = document.body.querySelectorAll("h2, h3, h4, h5");
+    localStorage.getItem("headingsColor") &&
+      headings.forEach((heading) => heading.classList.add("red-font"));
+    localStorage.getItem("headingsSize") &&
+      headings.forEach((heading) => heading.classList.add("enlarge-font"));
   },
   methods: {
     sendMessage() {
-      if ((this.nameInput && this.emailInput && this.messageInput) !== "") {
-        this.nameInput = "";
-        this.emailInput = "";
-        this.telInput = "";
-        this.messageInput = "";
-      }
+      this.nameInput &&
+        this.emailInput &&
+        this.messageInput !== "" &&
+        (this.showModal = true);
+    },
+    closeModalAndReset() {
+      this.showModal = false;
+      this.nameInput = "";
+      this.emailInput = "";
+      this.telInput = "";
+      this.messageInput = "";
     },
   },
 };
@@ -156,5 +177,16 @@ export default {
 .newsletter-checkbox input:checked + label {
   background: url("~@/assets/primary-check.png") no-repeat center center/cover;
   border: none;
+}
+
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 300px;
+  width: 400px;
+  background: lightgray;
+  text-align: center;
 }
 </style>

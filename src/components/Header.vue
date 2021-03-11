@@ -21,6 +21,9 @@
           <router-link to="/galerija">galerija</router-link>
         </li>
         <li>
+          <router-link to="/tinklarastis">tinklaraštis</router-link>
+        </li>
+        <li>
           <router-link to="/kontaktai">kontaktai</router-link>
         </li>
       </ul>

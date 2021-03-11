@@ -7,7 +7,7 @@
           :src="require('@/assets/gallery/' + img + '')"
           alt=""
         />
-        <a href="#" class="news_item_date">
+        <a class="news_item_date">
           <h3>17</h3>
           <p>Rugs.</p>
         </a>
@@ -19,10 +19,10 @@
         <p>{{ paragraph }}</p>
         <ul class="news-info-link">
           <li>
-            <a href="#"> Joga, Hatha</a>
+            <a>Joga, Hatha</a>
           </li>
           <li>
-            <a href="#"> 5 Komentarai</a>
+            <a>5 Komentarai</a>
           </li>
         </ul>
       </div>
@@ -41,7 +41,7 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
 .news_item_img {
   position: relative;
 }

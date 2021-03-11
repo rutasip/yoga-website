@@ -18,6 +18,11 @@ export default {
     Sidebar,
     Footer,
   },
+  watch: {
+    $route(to) {
+      document.title = to.meta.title || "Yogendra - Jogos Studija";
+    },
+  },
 };
 </script>
 

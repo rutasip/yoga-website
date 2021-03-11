@@ -12,6 +12,19 @@ const routes = [
     path: "/",
     name: "Home",
     component: Home,
+    meta: {
+      title: "Yogendra - Jogos Studija",
+      // metaTags: [
+      //   {
+      //     name: "description",
+      //     content: "Pagrindinis jogos studijos puslapis",
+      //   },
+      //   {
+      //     property: "og:description",
+      //     content: "Pagrindinis jogos studijos puslapis",
+      //   },
+      // ],
+    },
   },
   {
     path: "/kainos",
